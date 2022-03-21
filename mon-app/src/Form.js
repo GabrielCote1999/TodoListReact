@@ -18,7 +18,7 @@ import React, { useState } from "react";
         return(
             <div>
                 <form >
-                    <h1>Create a Todo</h1>
+                    
                     <label htmlFor='ftitle'>Title </label>
                     <input type = "text" 
                     value ={title}  

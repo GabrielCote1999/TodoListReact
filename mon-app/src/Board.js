@@ -2,6 +2,16 @@
 import { unmountComponentAtNode, render } from "react-dom";
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+    Box,
+    Grid,
+    makeStyles,
+    Paper,
+    TextField,
+    Typography,
+  } from "@material-ui/core";
+  import { indigo } from "@material-ui/core/colors";
+  
 function Board(props){
 
     const [data, setData] = useState({todos: []});
@@ -21,9 +31,11 @@ function Board(props){
                return (
             <div key = {todo.id}>
                 
-                <h1>Title: {todo.title}</h1>
-                <p>Description: {todo.description}</p>
-                <p>Id: {todo.id}</p>
+                <h1>{todo.title}</h1>
+                <p>{todo.description}</p>
+                <p>{todo.id}</p>
+               
+
                 <button 
                 type = "button"
                 className="btn btn-primary"
