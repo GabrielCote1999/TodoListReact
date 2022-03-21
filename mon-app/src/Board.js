@@ -1,6 +1,7 @@
 
 import { unmountComponentAtNode, render } from "react-dom";
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function Board(props){
 
     const [data, setData] = useState({todos: []});
@@ -18,15 +19,18 @@ function Board(props){
             {props.todos.map((todo) => {
                
                return (
-            <div>
+            <div key = {todo.id}>
                 
                 <h1>Title: {todo.title}</h1>
-               
                 <p>Description: {todo.description}</p>
                 <p>Id: {todo.id}</p>
-                <button onClick={removeItem}>click here</button>
-        
+                <button 
+                type = "button"
+                className="btn btn-primary"
+                onClick={removeItem}>Delete
                 
+                </button>
+   
             </div>);
               })}
               </div>
