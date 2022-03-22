@@ -1,3 +1,4 @@
+import { TextField, Box } from "@material-ui/core";
 import React, { useState } from "react";
 
 
@@ -19,20 +20,34 @@ import React, { useState } from "react";
             <div>
                 <form >
                     
-                    <label htmlFor='ftitle'>Title </label>
-                    <input type = "text" 
+                    
+                    <TextField 
+                    
+                    label='Title'
+                    required
+                    type = "text" 
                     value ={title}  
+
                     onChange ={(e) => setTitle(e.target.value)} 
                     name = "title"/>
                     <br></br>
                     <br></br>
-                    <label htmlFor='fdescription'>description</label>
-                    <input type = "text"
+                    <TextField 
+                     variant="standard"
+                    required
+                    label='description'
+                    type = "text"
                     value ={description}
                     onChange = {(e) => setDescription(e.target.value)}
                     name = "description" />
-
-                    <button type="button" onClick={sendButton} >Submit</button>
+                    <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <button
+                    className="btn btn-primary"
+                    type="button"
+                    variant="contained"
+                    sx={{ mt: 3, ml: 1 }}
+                    onClick={sendButton} >Submit</button>
+                </Box>
                 </form>
                 
                 

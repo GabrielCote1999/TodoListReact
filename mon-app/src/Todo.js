@@ -1,4 +1,21 @@
-import React from "react";
+import React, { Component, Fragment } from "react";
+import { Grid, Paper } from "@material-ui/core";
+import IconButton from "@material-ui/core/IconButton";
+import { CSSTransition } from "react-transition-group";
+
+const styles = {
+  Icon: {
+    marginLeft: "auto"
+  },
+  Paper: {
+    margin: "auto",
+    padding: 10,
+    display: "flex",
+    alignItems: "center",
+    marginTop: 10,
+    width: 500
+  }
+};
 
 class Todo extends React.Component {
   constructor(props) {
@@ -36,6 +53,7 @@ class Todo extends React.Component {
 
   render() {
     const isDone = this.state.done;
+    const gridClass = this.state.fade ? "fade-out" : "";
 
     return (
       <div>
@@ -46,7 +64,8 @@ class Todo extends React.Component {
 
           <p>{isDone ? "done" : "not done"} </p>
           <button onClick={this.handleIsDone}>click me!</button>
-          
+
+
         
         
       </div>

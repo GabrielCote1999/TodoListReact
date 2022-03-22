@@ -23,9 +23,11 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   heading: {
+    fontFamily:'arial',
+    fontWeight : '600',
     textAlign: "center",
     color: indigo[500],
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(2),
   },
 }));
 
@@ -59,7 +61,10 @@ function App() {
         <Grid item xs={12}>
         <Paper elevation={3}>
         <form  className={classes.formContainer}>
-        <Typography variant='h5' className={classes.heading}>
+        <Typography 
+        variant='h4' 
+        className={classes.heading}
+        >
                 {" "}
                 My Todo List 
               </Typography>
@@ -68,7 +73,7 @@ function App() {
           
             <Form addTodo={addTodoData} />
 
-            <Board todos={data["todos"]} />
+           
         </Grid>
         </Grid>
         </form>
@@ -76,6 +81,7 @@ function App() {
         </Grid>
         </Grid>
         </Box>
+        <Board todos={data["todos"]} />
         </div>
   );
 }
