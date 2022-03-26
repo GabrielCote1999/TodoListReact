@@ -1,4 +1,4 @@
-<h1>A Simple Todo List  </h1>
+<h1>A Simple Todo List 📗 </h1>
 I'm currently trying to learn React.js, so I decided to make this little project to practice.
 It is a simple Todo List that i've made with React.js and material.ui for the visuals
 <br>
